@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+$main-color: #F3F2F0;
+$hover-color: #D40000;
+
+$font-inter: 'Inter', sans-serif;
+
+// $r_minmob: 320px;
+// $r_mob_360: 360px;
+// $r_mob_400: 400px;
+// $r_mob_500: 500px;
+// $r_tab: 768px;
+// $r_tab_900: 900px;
+// $r_desk: 1000px;
+// $r_desk_1120: 1120px;
+// $r_desk_1170: 1170px;
+// $r_desk_hd: 1200px;
+// $r_desk_1280: 1280px;
+// $r_desk_1350: 1350px;
+// $r_desk_1440: 1440px;
+// $r_desk_full_1750: 1750px;
+
+html {
+    font-size: 10px;
+    // @media (max-width: $r_mob_500) {
+    //     font-size: 8px;
+    // }
+}
+
+body {
+    color: $main-color;
+    font-size: 1.6rem;
+    font-family: $font-inter;
+    background-color: #232326;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    &__menu {
+        padding-top: 3.4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+        font-size: 1.4rem;
+        padding-left: 0;
+    }
+    &__link {
+        color: $main-color;
+        text-decoration: none;
+        transition: .3s;
+        &:hover {
+            color: $hover-color;
+        }
+    }
+    &__contacts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    &__phone, &__mail {
+        color: $main-color;
+        font-size: 1.4rem;
+        text-decoration: none;
+        padding: .4rem 0;
+        transition: .3s;
+        &:hover {
+            color: $hover-color;
+        }
+    }
+    &__phone {
+        border-right: 1px solid $main-color;
+        padding-right: 1.5rem;
+    }
+}
+
+.main {
+    padding-top: 6rem;
+    &__image {
+        display: block;
+        width: 100%;
+    }
+    &__name {
+        font-size: 2.8rem;
+    }
+    &__spec {
+        margin-top: 3.5rem;
+        font-size: 7.4rem;
+        letter-spacing: 3%;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__info {
+        border-bottom: 1px solid $main-color;
+        padding-top: 12rem;
+        padding-bottom: 6.4rem;
+        position: relative;
+        &__footer {
+            margin-top: 9.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        &__item {
+            border-right: 1px solid $main-color;
+            padding: .4rem 1.5rem .4rem 0;
+            &:nth-child(3) {
+                border-right: none;
+                padding-right: 0;
+            }
+        }
+        &__link {
+            color: $main-color;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 1rem;
+            transition: .3s;
+            &:hover {
+                border-bottom: 2px solid $main-color;
+            }
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 15px;
+                height: 10px;
+                background-image: url(../images/icons/arrow.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 15px;
+                margin-left: 1rem;
+            }
+        }
+        &__link-soc {
+            color: $main-color;
+            text-decoration: none;
+            transition: .3s;
+            &:hover {
+                color: $hover-color;
+            }
+        }
+    }
+    &__ellipce {
+        width: 253px;
+        height: 253px;
+        display: block;
+        position: absolute;
+        background-color: $hover-color;
+        border-radius: 100%;
+        top: 82px;
+        left: -130px;
+        z-index: -1;
+        &_small {
+            width: 106px;
+            height: 106px;
+            top: auto;
+            left: auto;
+            bottom: 40px;
+            right: 26px;
+        }
+    }
+    &__triangle {
+        display: block;
+        position: absolute;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 90px solid $main-color;
+        top: 122px;
+        left: -162px;
+    }
+}
