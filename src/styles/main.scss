@@ -95,13 +95,7 @@ body {
     }
     &__name {
         font-size: 2.8rem;
-    }
-    &__spec {
-        margin-top: 3.5rem;
-        font-size: 7.4rem;
-        letter-spacing: 3%;
-        font-weight: 700;
-        text-transform: uppercase;
+        margin-bottom: 3.5rem;
     }
     &__info {
         border-bottom: 1px solid $main-color;
@@ -177,6 +171,12 @@ body {
             bottom: 40px;
             right: 26px;
         }
+        &_portfolio {
+            width: 465px;
+            height: 465px;
+            top: 0;
+            left: 0;
+        }
     }
     &__triangle {
         display: block;
@@ -207,11 +207,15 @@ body {
 }
 
 .title {
-    font-size: 2.8rem;
+    font-size: 7.4rem;
     letter-spacing: 3%;
     line-height: 1.5;
     font-weight: 700;
     text-transform: uppercase;
+    margin: 0;
+    &_min {
+        font-size: 2.8rem;
+    }
 }
 
 .description {
@@ -253,5 +257,41 @@ body {
 }
 
 .conditions {
+    margin-bottom: 9rem;
+    &__list {
+        list-style: none;
+        padding-left: 0;
+        &:last-child {
+            border-bottom: 1px solid $main-color;
+        }
+    }
+    &__item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        border-top: 1px solid $main-color;
+        padding: 3rem 0;
+    }
+    &__title {
+        font-size: 2.8rem;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+    &__description {
+        line-height: 1.5;
+        opacity: .8;
+    }
+}
 
+.portfolio {
+    background-color: #000000;
+    position: relative;
+    z-index: 1;
+    &__title-box {
+        padding-top: 6.1rem;
+        padding-bottom: 14.4rem;
+    }
+    &__info-box {
+        
+    }
 }
