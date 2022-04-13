@@ -206,15 +206,37 @@ body {
     }
 }
 
+.info-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid $main-color;
+    padding-bottom: 6rem;
+}
+
 .title {
     font-size: 7.4rem;
-    letter-spacing: 3%;
     line-height: 1.5;
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
+    position: relative;
+    z-index: 1;
     &_min {
         font-size: 2.8rem;
+    }
+    &_ellipce {
+        &::before {
+            content: '';
+            z-index: -1;
+            width: 140px;
+            height: 140px;
+            display: block;
+            top: -50px;
+            left: -70px;
+            position: absolute;
+            background-color: $hover-color;
+            border-radius: 100%;
+        }
     }
 }
 
@@ -227,12 +249,6 @@ body {
 
 .about {
     padding: 18rem 0;
-    &__info-box {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        border-bottom: 1px solid $main-color;
-        padding-bottom: 6rem;
-    }
     &__skills-box {
         padding-top: 6rem;
         max-width: 50%;
@@ -380,6 +396,105 @@ body {
         }
         &__image {
             height: 40%;
+            filter: grayscale(1);
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+                filter: grayscale(0);
+            }
+        }
+    }
+}
+
+.rates {
+    &__list {
+        list-style: none;
+        padding-left: 0;
+        padding-bottom: 12rem;
+        margin: 0;
+        :last-child {
+            border-bottom: none;
+        }
+    }
+    &__item {
+        border-bottom: 1px solid $main-color;
+        padding-top: 6rem;
+        padding-bottom: 7.6rem;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        &__item {
+            max-width: 90%;
+        }
+        &__title {
+            font-size: 2.8rem;
+            line-height: 1.5;
+            font-weight: 400;
+            margin: 0 0 2rem 0;
+        }
+        &__description {
+            opacity: .8;
+            line-height: 1.5;
+            font-weight: 400;
+            margin: 0 0 7.5rem 0;
+        }
+        &__link {
+            color: $main-color;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 1rem;
+            transition: .3s;
+            &:hover {
+                border-bottom: 2px solid $main-color;
+            }
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 15px;
+                height: 10px;
+                background-image: url(../images/icons/arrow.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 15px;
+                margin-left: 1rem;
+            }
+        }
+        &__list-title {
+            font-weight: 700;
+            line-height: 1.5;
+            margin: 0 0 2rem 0;
+        }
+        &__list {
+            padding-left: 18px;
+            margin: 0 0 4rem 0;
+            list-style: disc;
+        }
+        &__list-item {
+            line-height: 2;
+            opacity: .8;
+        }
+        &__price {
+            font-size: 4.2rem;
+            line-height: 1.5;
+            font-weight: 700;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+            &_ellipce {
+                &::before {
+                    content: '';
+                    z-index: -1;
+                    width: 90px;
+                    height: 90px;
+                    display: block;
+                    position: absolute;
+                    background-color: $hover-color;
+                    border-radius: 100%;
+                    top: -14px;
+                    left: -42px;
+                }
+            }
         }
     }
 }
