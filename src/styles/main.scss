@@ -244,6 +244,7 @@ body {
     font-size: 2.8rem;
     line-height: 1.5;
     font-weight: 400;
+    margin: 0;
     opacity: .8;
 }
 
@@ -494,6 +495,96 @@ body {
                     top: -14px;
                     left: -42px;
                 }
+            }
+        }
+    }
+}
+
+.connection {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 6rem;
+        padding-bottom: 13rem;
+        border-bottom: 1px solid $main-color;
+    }
+    &__item {
+        &:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        &__label {
+            font-size: 1.2rem;
+            opacity: .8;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        &__phone {
+            height: 65px;
+            outline: none;
+            border: 0;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            padding: 0 20px;
+            margin-bottom: 2rem;
+            color: rgba($main-color, .2);
+            background-color: rgba($main-color, .1);
+        }
+        &__select {
+            margin-bottom: 4rem;
+            height: 65px;
+            outline: none;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            padding: 0 20px;
+            color: rgba($main-color, 1);
+            background-color: rgba($main-color, .1);
+            border: 0;
+        }
+        &__button {
+            display: block;
+            background-color: $hover-color;
+            height: 65px;
+            border: 0;
+            color: $main-color;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+                background-color: #EA0E00;
+            }
+        }
+    }
+    &__info {
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            gap: 1.5rem;
+            padding-left: 0;
+            max-width: 40%;
+            margin: 0;
+        }
+        &__item {
+            border-right: 1px solid $main-color;
+            padding: .4rem 1.5rem .4rem 0;
+            &:nth-child(3) {
+                border-right: none;
+                padding-right: 0;
+            }
+        }
+        &__link-soc {
+            color: $main-color;
+            text-decoration: none;
+            transition: .3s;
+            &:hover {
+                color: $hover-color;
             }
         }
     }
