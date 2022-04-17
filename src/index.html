@@ -9,27 +9,27 @@
 <body>
     <header class="header">
         <div class="container">
-            <nav class="header__menu">
-                <ul class="header__list">
-                    <li class="header__item">
-                        <a href="#" class="header__link">Обо мне</a>
+            <nav class="menu menu_header">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Обо мне</a>
                     </li>
-                    <li class="header__item">
-                        <a href="#" class="header__link">Портфолио</a>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Портфолио</a>
                     </li>
-                    <li class="header__item">
-                        <a href="#" class="header__link">Этапы работ</a>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Этапы работ</a>
                     </li>
-                    <li class="header__item">
-                        <a href="#" class="header__link">Цены</a>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Цены</a>
                     </li>
-                    <li class="header__item">
-                        <a href="#" class="header__link">Обратная связь</a>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Обратная связь</a>
                     </li>
                 </ul>
-                <div class="header__contacts">
-                    <a href="#" class="header__phone">8 923 777-77-77</a>
-                    <a href="#" class="header__mail">alexdev@gmail.com</a>
+                <div class="menu__contacts">
+                    <a href="#" class="menu__phone">8 923 777-77-77</a>
+                    <a href="#" class="menu__mail">alexdev@gmail.com</a>
                 </div>
             </nav>
         </div>
@@ -38,6 +38,7 @@
         <div class="container">
             <img src="./images/main-image.jpg" alt="Main-image" class="main__image">
             <div class="main__info">
+                <div class="ellipce ellipce_trianlle ellipce_main"></div>
                 <p class="main__name">Александр Антропов</p>
                 <h1 class="title">web-разработчик</h1>
                 <div class="main__info__footer">
@@ -54,9 +55,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="main__ellipce"></div>
+                <!-- <div class="main__ellipce"></div> -->
                 <div class="main__ellipce main__ellipce_small"></div>
-                <div class="main__triangle"></div>
+                <!-- <div class="main__triangle"></div> -->
             </div>
             <div class="main__grid">
                 <div class="main__grid__item">
@@ -128,7 +129,7 @@
     </div>
     <div class="portfolio__title-box">
         <div class="container">
-            <h1 class="title">Портфолио</h1>
+            <h1 class="title title_portfolio-ellipce">Портфолио</h1>
         </div>
     </div>
     <div class="portfolio">
@@ -268,7 +269,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="main__ellipce main__ellipce_portfolio"></div> -->
     </div>
     <div class="rates">
         <div class="container">
@@ -381,7 +381,8 @@
     <div class="connection">
         <div class="container">
             <div class="info-box">
-                <h2 class="title title_min">Расскажите о своем проекте</h2>
+                <div class="ellipce ellipce_trianlle ellipce_connection"></div>
+                <h2 class="title title_min">Расскажите о&nbsp;своем&nbsp;проекте</h2>
                 <h3 class="description">
                     Воспользуйтесь формой обратной связи, чтобы обсудить ваш проект, заполните все поля, и я свяжусьс вами в ближайшее время
                 </h3>
@@ -418,5 +419,36 @@
             </div>
         </div>
     </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="menu menu_footer">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Обо мне</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Портфолио</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Этапы работ</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Цены</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Обратная связь</a>
+                    </li>
+                </ul>
+                <div class="menu__contacts">
+                    <a href="#" class="menu__phone">8 923 777-77-77</a>
+                    <a href="#" class="menu__mail">alexdev@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer__text">
+                <p>&copy; 2020, Все права защищены</p>
+                <p>Сделано в рамках курса учебной платформы <a href="#" class="footer__author">Annblok</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

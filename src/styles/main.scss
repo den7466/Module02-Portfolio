@@ -41,12 +41,15 @@ body {
     padding: 0 15px;
 }
 
-.header {
-    &__menu {
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_header {
         padding-top: 3.4rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    }
+    &_footer {
+        padding-top: 6rem;
     }
     &__list {
         list-style: none;
@@ -56,6 +59,7 @@ body {
         gap: 3rem;
         font-size: 1.4rem;
         padding-left: 0;
+        margin: 0;
     }
     &__link {
         color: $main-color;
@@ -211,6 +215,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     border-bottom: 1px solid $main-color;
     padding-bottom: 6rem;
+    position: relative;
 }
 
 .title {
@@ -220,9 +225,23 @@ body {
     text-transform: uppercase;
     margin: 0;
     position: relative;
-    z-index: 1;
     &_min {
         font-size: 2.8rem;
+        max-width: 70%;
+    }
+    &_portfolio-ellipce {
+        &::before {
+            content: '';
+            z-index: -1;
+            width: 465px;
+            height: 465px;
+            display: block;
+            top: -50px;
+            left: calc(50% - 232.5px);
+            position: absolute;
+            background-color: $hover-color;
+            border-radius: 100%;
+        }
     }
     &_ellipce {
         &::before {
@@ -237,6 +256,38 @@ body {
             background-color: $hover-color;
             border-radius: 100%;
         }
+    }
+}
+
+.ellipce {
+    display: block;
+    position: absolute;
+    background-color: $hover-color;
+    border-radius: 100%;
+    z-index: -1;
+    &_trianlle {
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 90px solid $main-color;
+            top: 14px;
+            left: -26px;
+        }
+    }
+    &_main {
+        width: 253px;
+        height: 253px;
+        top: 100px;
+        left: -144px;
+    }
+    &_connection {
+        width: 300px;
+        height: 300px;
+        top: -30px;
+        left: -144px;
     }
 }
 
@@ -302,7 +353,7 @@ body {
 
 .portfolio {
     background: linear-gradient(180deg, #141416 0%, rgba(20, 20, 22, 0) 100%);
-    z-index: 1;
+    z-index: 0;
     &__title {
         font-size: 2.8rem;
         font-weight: 700;
@@ -312,11 +363,12 @@ body {
     }
     &__title-box {
         padding-bottom: 14.4rem;
-        z-index: 2;
+        z-index: 0;
         position: relative;
     }
     &__info-box {
         padding-top: 6.1rem;
+        position: relative;
     }
     &__list {
         list-style: none;
@@ -587,5 +639,22 @@ body {
                 color: $hover-color;
             }
         }
+    }
+}
+
+.footer {
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.2rem;
+        opacity: .3;
+        line-height: 1.5;
+        margin-top: 2.5rem;
+    }
+    &__author {
+        font-size: 1.2rem;
+        color: $main-color;
+        line-height: 1.5;
     }
 }
