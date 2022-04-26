@@ -9,8 +9,8 @@ $font-inter: 'Inter', sans-serif;
 // $r_mob_360: 360px;
 // $r_mob_400: 400px;
 // $r_mob_500: 500px;
-// $r_tab: 768px;
-// $r_tab_900: 900px;
+$r_tab: 768px;
+$r_tab_900: 900px;
 // $r_desk: 1000px;
 // $r_desk_1120: 1120px;
 // $r_desk_1170: 1170px;
@@ -56,7 +56,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 3rem;
+        gap: 2.8rem;
         font-size: 1.4rem;
         padding-left: 0;
         margin: 0;
@@ -73,7 +73,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 1.5rem;
+        gap: 1rem;
     }
     &__phone, &__mail {
         color: $main-color;
@@ -88,6 +88,22 @@ body {
     &__phone {
         border-right: 1px solid $main-color;
         padding-right: 1.5rem;
+        @media (max-width: $r_tab_900) {
+            border-right: none;
+            padding-right: 0;
+        }
+        &_footer {
+            border-right: 1px solid $main-color;
+            padding-right: 1.5rem;
+        }
+    }
+    &__mail {
+        @media (max-width: $r_tab_900) {
+            display: none;
+        }
+        &_footer {
+            display: block;
+        }
     }
 }
 
@@ -99,15 +115,15 @@ body {
     }
     &__name {
         font-size: 2.8rem;
-        margin-bottom: 3.5rem;
+        margin-bottom: 2.5rem;
     }
     &__info {
         border-bottom: 1px solid $main-color;
-        padding-top: 12rem;
-        padding-bottom: 6.4rem;
+        padding-top: 9.8rem;
+        padding-bottom: 4rem;
         position: relative;
         &__footer {
-            margin-top: 9.9rem;
+            margin-top: 7.1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -117,11 +133,12 @@ body {
             justify-content: space-between;
             align-items: center;
             list-style: none;
-            gap: 1.5rem;
+            padding-left: 0;
+            gap: 2.5rem;
         }
         &__item {
             border-right: 1px solid $main-color;
-            padding: .4rem 1.5rem .4rem 0;
+            padding: .4rem 3rem .4rem 0;
             &:nth-child(3) {
                 border-right: none;
                 padding-right: 0;
@@ -131,7 +148,9 @@ body {
             color: $main-color;
             text-decoration: none;
             border-bottom: 2px solid transparent;
+            padding-top: 1rem;
             padding-bottom: 1rem;
+            letter-spacing: .05rem;
             transition: .3s;
             &:hover {
                 border-bottom: 2px solid $main-color;
@@ -145,7 +164,7 @@ body {
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 15px;
-                margin-left: 1rem;
+                margin-left: 1.5rem;
             }
         }
         &__link-soc {
@@ -172,8 +191,8 @@ body {
             height: 106px;
             top: auto;
             left: auto;
-            bottom: 40px;
-            right: 26px;
+            bottom: 1.5rem;
+            right: 3.8rem;
         }
         &_portfolio {
             width: 465px;
@@ -194,10 +213,10 @@ body {
     &__grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 1%;
-        padding-top: 6rem;
+        gap: 2%;
+        padding-top: 6.5rem;
         &__title {
-            letter-spacing: 3%;
+            letter-spacing: .05rem;
             font-weight: 700;
             margin: 0;
             text-transform: uppercase;
@@ -205,7 +224,7 @@ body {
         &__description {
             font-size: 1.4rem;
             opacity: .8;
-            margin: 1.5rem 0 0;
+            margin: 2rem 0 0;
         }
     }
 }
@@ -216,6 +235,7 @@ body {
     border-bottom: 1px solid $main-color;
     padding-bottom: 6rem;
     position: relative;
+    gap: 2%;
 }
 
 .title {
@@ -225,9 +245,11 @@ body {
     text-transform: uppercase;
     margin: 0;
     position: relative;
+    letter-spacing: .22rem;
     &_min {
         font-size: 2.8rem;
         max-width: 70%;
+        letter-spacing: .1rem;
     }
     &_portfolio-ellipce {
         &::before {
@@ -236,8 +258,8 @@ body {
             width: 465px;
             height: 465px;
             display: block;
-            top: -50px;
-            left: calc(50% - 232.5px);
+            top: -80px;
+            left: calc(50% - 223.5px);
             position: absolute;
             background-color: $hover-color;
             border-radius: 100%;
@@ -270,24 +292,24 @@ body {
             content: '';
             display: block;
             position: absolute;
-            border-left: 40px solid transparent;
-            border-right: 40px solid transparent;
-            border-bottom: 90px solid $main-color;
-            top: 14px;
-            left: -26px;
+            border-left: 3.2rem solid transparent;
+            border-right: 3.2rem solid transparent;
+            border-bottom: 7.2rem solid $main-color;
+            top: 3.6rem;
+            left: -2.2rem;
         }
     }
     &_main {
         width: 253px;
         height: 253px;
-        top: 100px;
-        left: -144px;
+        top: 6.6rem;
+        left: -12.8rem;
     }
     &_connection {
         width: 300px;
         height: 300px;
-        top: -30px;
-        left: -144px;
+        top: -2.7rem;
+        left: -15rem;
     }
 }
 
@@ -300,15 +322,15 @@ body {
 }
 
 .about {
-    padding: 18rem 0;
+    padding: 18.8rem 0 18rem 0;
     &__skills-box {
-        padding-top: 6rem;
-        max-width: 50%;
-        margin-left: 50%;
+        padding-top: 5.9rem;
+        max-width: 49%;
+        margin-left: 51%;
         &__grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 7rem 6rem;
+            gap: 6rem 2rem;
         }
         &__title {
             font-weight: 700;
@@ -325,10 +347,11 @@ body {
 }
 
 .conditions {
-    margin-bottom: 9rem;
+    margin-bottom: 17rem;
     &__list {
         list-style: none;
         padding-left: 0;
+        margin: 0;
         &:last-child {
             border-bottom: 1px solid $main-color;
         }
@@ -338,12 +361,37 @@ body {
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         border-top: 1px solid $main-color;
-        padding: 3rem 0;
+        padding: 2.24rem 0;
+        gap: 2%;
     }
     &__title {
         font-size: 2.8rem;
         line-height: 1.5;
         font-weight: 400;
+        margin: 0;
+        padding-left: 7rem;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &_01 {
+            &::before {
+                content: '01';
+            }
+        }
+        &_02 {
+            &::before {
+                content: '02';
+            }
+        }
+        &_03 {
+            &::before {
+                content: '03';
+            }
+        }
     }
     &__description {
         line-height: 1.5;
@@ -358,21 +406,21 @@ body {
         font-size: 2.8rem;
         font-weight: 700;
         line-height: 1.5;
-        margin-top: 0;
+        margin-top: 2.2rem;
         margin-bottom: 4rem;
     }
     &__title-box {
-        padding-bottom: 14.4rem;
+        padding-bottom: 13rem;
         z-index: 0;
         position: relative;
     }
     &__info-box {
-        padding-top: 6.1rem;
         position: relative;
     }
     &__list {
         list-style: none;
         padding-left: 0;
+        margin: 0;
     }
     &__item {
         display: flex;
@@ -386,8 +434,8 @@ body {
         font-weight: 700;
     }
     &__image {
-        width: 560px;
-        height: 315px;
+        width: 49%;
+        height: 100%;
     }
     &__description__list {
         list-style: "- ";
@@ -395,7 +443,7 @@ body {
         padding-left: 0;
         margin-bottom: 4rem;
         margin-left: 1.4rem;
-        :last-child {
+        &:last-child {
             margin-bottom: 0;
         }
     }
@@ -408,18 +456,21 @@ body {
         font-size: 28px;
         font-weight: 400;
         line-height: 1.5;
+        margin-top: 12rem;
+        margin-bottom: 2rem;
     }
     &__grid-1 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         align-items: center;
-        gap: 10%;
-        padding-bottom: 18rem;
+        gap: 4rem 2%;
+        padding-top: 6.2rem;
+        padding-bottom: 15.5rem;
         &__item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 10%;
+            gap: 11%;
         }
         &__image {
             width: 40px;
@@ -439,13 +490,13 @@ body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         align-items: center;
-        padding-bottom: 13.1rem;
+        padding-bottom: 18.1rem;
         &__item {
             display: flex;
             justify-content: center;
             align-items: center;
             border: 1px solid rgba($main-color, .6);
-            min-height: 148px;
+            min-height: 14.6rem;
         }
         &__image {
             height: 40%;
@@ -465,18 +516,19 @@ body {
         padding-left: 0;
         padding-bottom: 12rem;
         margin: 0;
-        :last-child {
-            border-bottom: none;
-        }
     }
     &__item {
         border-bottom: 1px solid $main-color;
         padding-top: 6rem;
-        padding-bottom: 7.6rem;
+        padding-bottom: 5.9rem;
+        &:nth-child(3) {
+            border-bottom: none;
+        }
     }
     &__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 2%;
         &__item {
             max-width: 90%;
         }
@@ -485,17 +537,19 @@ body {
             line-height: 1.5;
             font-weight: 400;
             margin: 0 0 2rem 0;
+            max-width: 80%;
         }
         &__description {
             opacity: .8;
             line-height: 1.5;
             font-weight: 400;
-            margin: 0 0 7.5rem 0;
+            margin: 0 0 7.8rem 0;
         }
         &__link {
             color: $main-color;
             text-decoration: none;
             border-bottom: 2px solid transparent;
+            padding-top: 1rem;
             padding-bottom: 1rem;
             transition: .3s;
             &:hover {
@@ -510,7 +564,7 @@ body {
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 15px;
-                margin-left: 1rem;
+                margin-left: 2rem;
             }
         }
         &__list-title {
@@ -519,7 +573,7 @@ body {
             margin: 0 0 2rem 0;
         }
         &__list {
-            padding-left: 18px;
+            padding-left: 1.5rem;
             margin: 0 0 4rem 0;
             list-style: disc;
         }
@@ -556,7 +610,8 @@ body {
     &__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        padding-top: 6rem;
+        gap: 2%;
+        padding-top: 6.2rem;
         padding-bottom: 13rem;
         border-bottom: 1px solid $main-color;
     }
@@ -574,7 +629,7 @@ body {
             font-size: 1.2rem;
             opacity: .8;
             font-weight: 400;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
         }
         &__phone {
             height: 65px;
@@ -583,7 +638,7 @@ body {
             font-size: 1.2rem;
             line-height: 1.5;
             padding: 0 20px;
-            margin-bottom: 2rem;
+            margin-bottom: 2.3rem;
             color: rgba($main-color, .2);
             background-color: rgba($main-color, .1);
         }
@@ -593,7 +648,7 @@ body {
             outline: none;
             font-size: 1.2rem;
             line-height: 1.5;
-            padding: 0 20px;
+            padding: 0 1.5rem;
             color: rgba($main-color, 1);
             background-color: rgba($main-color, .1);
             border: 0;
@@ -618,14 +673,14 @@ body {
             justify-content: space-between;
             align-items: center;
             list-style: none;
-            gap: 1.5rem;
+            gap: 2.5rem;
             padding-left: 0;
             max-width: 40%;
             margin: 0;
         }
         &__item {
             border-right: 1px solid $main-color;
-            padding: .4rem 1.5rem .4rem 0;
+            padding: .4rem 3rem .4rem 0;
             &:nth-child(3) {
                 border-right: none;
                 padding-right: 0;
