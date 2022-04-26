@@ -5,8 +5,8 @@ $hover-color: #D40000;
 
 $font-inter: 'Inter', sans-serif;
 
-// $r_minmob: 320px;
-// $r_mob_360: 360px;
+$r_minmob: 320px;
+$r_mob_360: 360px;
 // $r_mob_400: 400px;
 // $r_mob_500: 500px;
 $r_tab: 768px;
@@ -50,6 +50,10 @@ body {
     }
     &_footer {
         padding-top: 6rem;
+        @media (max-width: $r_tab) {
+            flex-direction: column-reverse;
+            gap: 4rem;
+        }
     }
     &__list {
         list-style: none;
@@ -116,6 +120,9 @@ body {
     &__name {
         font-size: 2.8rem;
         margin-bottom: 2.5rem;
+        @media (max-width: $r_tab) {
+            font-size: 2.3rem;
+        }
     }
     &__info {
         border-bottom: 1px solid $main-color;
@@ -220,11 +227,17 @@ body {
             font-weight: 700;
             margin: 0;
             text-transform: uppercase;
+            @media (max-width: $r_tab) {
+                font-size: 1.4rem;
+            }
         }
         &__description {
             font-size: 1.4rem;
             opacity: .8;
             margin: 2rem 0 0;
+            @media (max-width: $r_tab) {
+                font-size: 1.2rem;
+            }
         }
     }
 }
@@ -246,10 +259,16 @@ body {
     margin: 0;
     position: relative;
     letter-spacing: .22rem;
+    @media (max-width: $r_tab) {
+        font-size: 5.1rem;
+    }
     &_min {
         font-size: 2.8rem;
         max-width: 70%;
         letter-spacing: .1rem;
+        @media (max-width: $r_tab) {
+            font-size: 2.2rem;
+        }
     }
     &_portfolio-ellipce {
         &::before {
@@ -263,6 +282,12 @@ body {
             position: absolute;
             background-color: $hover-color;
             border-radius: 100%;
+            @media (max-width: $r_tab) {
+                width: 331px;
+                height: 331px;
+                top: -40px;
+                left: calc(50% - 165.5px);
+            }
         }
     }
     &_ellipce {
@@ -319,6 +344,9 @@ body {
     font-weight: 400;
     margin: 0;
     opacity: .8;
+    @media (max-width: $r_tab) {
+        font-size: 2.2rem;
+    }
 }
 
 .about {
@@ -336,12 +364,18 @@ body {
             font-weight: 700;
             line-height: 1.5;
             margin: 0;
+            @media (max-width: $r_tab) {
+                font-size: 1.4rem;
+            }
         }
         &__description {
             font-size: 1.4rem;
             line-height: 1.5;
             opacity: .8;
             margin: 2rem 0 0;
+            @media (max-width: $r_tab) {
+                font-size: 1.2rem;
+            }
         }
     }
 }
@@ -371,6 +405,9 @@ body {
         margin: 0;
         padding-left: 7rem;
         position: relative;
+        @media (max-width: $r_tab) {
+            font-size: 2.2rem;
+        }
         &::before {
             content: '';
             position: absolute;
@@ -396,6 +433,9 @@ body {
     &__description {
         line-height: 1.5;
         opacity: .8;
+        @media (max-width: $r_tab) {
+            font-size: 1.4rem;
+        }
     }
 }
 
@@ -408,6 +448,9 @@ body {
         line-height: 1.5;
         margin-top: 2.2rem;
         margin-bottom: 4rem;
+        @media (max-width: $r_tab) {
+            font-size: 2.2rem;
+        }
     }
     &__title-box {
         padding-bottom: 13rem;
@@ -429,9 +472,15 @@ body {
         border-bottom: 1px solid $main-color;
         padding-top: 6rem;
         padding-bottom: 6rem;
+        @media (max-width: $r_tab) {
+            font-size: 1.4rem;
+        }
     }
     &__days {
         font-weight: 700;
+        @media (max-width: $r_tab) {
+            font-size: 1.4rem;
+        }
     }
     &__image {
         width: 49%;
@@ -458,6 +507,9 @@ body {
         line-height: 1.5;
         margin-top: 12rem;
         margin-bottom: 2rem;
+        @media (max-width: $r_tab) {
+            font-size: 2.2rem;
+        }
     }
     &__grid-1 {
         display: grid;
@@ -479,11 +531,17 @@ body {
         &__title {
             font-weight: 700;
             line-height: 1.5;
+            @media (max-width: $r_tab) {
+                font-size: 1.4rem;
+            }
         }
         &__description {
             font-size: 1.4rem;
             line-height: 1.5;
             opacity: .8;
+            @media (max-width: $r_tab) {
+                font-size: 1.3rem;
+            }
         }
     }
     &__grid-2 {
@@ -497,9 +555,12 @@ body {
             align-items: center;
             border: 1px solid rgba($main-color, .6);
             min-height: 14.6rem;
+            @media (max-width: $r_tab) {
+                min-height: 11.6rem;
+            }
         }
         &__image {
-            height: 40%;
+            height: fit-content;
             filter: grayscale(1);
             cursor: pointer;
             transition: .3s;
@@ -538,12 +599,18 @@ body {
             font-weight: 400;
             margin: 0 0 2rem 0;
             max-width: 80%;
+            @media (max-width: $r_tab) {
+                font-size: 2.2rem;
+            }
         }
         &__description {
             opacity: .8;
             line-height: 1.5;
             font-weight: 400;
             margin: 0 0 7.8rem 0;
+            @media (max-width: $r_tab) {
+                font-size: 1.3rem;
+            }
         }
         &__link {
             color: $main-color;
@@ -571,6 +638,9 @@ body {
             font-weight: 700;
             line-height: 1.5;
             margin: 0 0 2rem 0;
+            @media (max-width: $r_tab) {
+                font-size: 1.4rem;
+            }
         }
         &__list {
             padding-left: 1.5rem;
@@ -580,6 +650,9 @@ body {
         &__list-item {
             line-height: 2;
             opacity: .8;
+            @media (max-width: $r_tab) {
+                font-size: 1.4rem;
+            }
         }
         &__price {
             font-size: 4.2rem;
@@ -588,6 +661,9 @@ body {
             margin: 0;
             position: relative;
             z-index: 1;
+            @media (max-width: $r_tab) {
+                font-size: 3.2rem;
+            }
             &_ellipce {
                 &::before {
                     content: '';
