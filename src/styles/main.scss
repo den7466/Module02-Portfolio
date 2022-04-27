@@ -458,21 +458,23 @@ body {
 
 .conditions {
     margin-bottom: 17rem;
-    &__list {
-        list-style: none;
-        padding-left: 0;
-        margin: 0;
+    &__info-block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, minmax(10.2rem, 1fr));
+        gap: 0;
         &:last-child {
             border-bottom: 1px solid $main-color;
         }
     }
     &__item {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
         border-top: 1px solid $main-color;
-        padding: 2.24rem 0;
-        gap: 2%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        &:nth-child(even) {
+            padding-left: 2rem;
+        }
     }
     &__title {
         font-size: 2.8rem;
@@ -483,6 +485,7 @@ body {
         position: relative;
         @media (max-width: $r_tab) {
             font-size: 2.2rem;
+            padding-left: 4rem;
         }
         &::before {
             content: '';
@@ -880,6 +883,10 @@ body {
         opacity: .3;
         line-height: 1.5;
         margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+        @media (max-width: $r_tab) {
+            flex-direction: column;
+        }
     }
     &__author {
         font-size: 1.2rem;
