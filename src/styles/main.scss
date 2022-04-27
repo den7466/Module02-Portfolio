@@ -8,7 +8,7 @@ $font-inter: 'Inter', sans-serif;
 $r_minmob: 320px;
 $r_mob_360: 360px;
 // $r_mob_400: 400px;
-// $r_mob_500: 500px;
+$r_mob_500: 500px;
 $r_tab: 768px;
 $r_tab_900: 900px;
 // $r_desk: 1000px;
@@ -22,9 +22,9 @@ $r_tab_900: 900px;
 
 html {
     font-size: 10px;
-    // @media (max-width: $r_mob_500) {
-    //     font-size: 8px;
-    // }
+    @media (max-width: $r_mob_500) {
+        font-size: 8px;
+    }
 }
 
 body {
@@ -39,6 +39,9 @@ body {
     max-width: 1140px;
     margin: 0 auto;
     padding: 0 15px;
+    @media (max-width: $r_tab) {
+        max-width: 600px;
+    }
 }
 
 .menu {
@@ -64,6 +67,16 @@ body {
         font-size: 1.4rem;
         padding-left: 0;
         margin: 0;
+        &_header {
+            @media (max-width: $r_tab) {
+                display: none;
+            }
+        }
+        &_footer {
+            @media (max-width: $r_tab) {
+                gap: 2rem;
+            }
+        }
     }
     &__link {
         color: $main-color;
@@ -106,6 +119,21 @@ body {
             display: none;
         }
         &_footer {
+            display: block;
+        }
+    }
+    &__burger {
+        display: none;
+        width: 26px;
+        height: 20px;
+        background-image: url(../images/icons/burger.svg);
+        background-size: 2.6rem 2rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        @media (max-width: $r_tab) {
             display: block;
         }
     }
@@ -222,6 +250,10 @@ body {
         grid-template-columns: repeat(4, 1fr);
         gap: 2%;
         padding-top: 6.5rem;
+        @media (max-width: $r_tab) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem 2%;
+        }
         &__title {
             letter-spacing: .05rem;
             font-weight: 700;
@@ -260,7 +292,7 @@ body {
     position: relative;
     letter-spacing: .22rem;
     @media (max-width: $r_tab) {
-        font-size: 5.1rem;
+        font-size: 4.1rem;
     }
     &_min {
         font-size: 2.8rem;
@@ -312,29 +344,69 @@ body {
     background-color: $hover-color;
     border-radius: 100%;
     z-index: -1;
-    &_trianlle {
-        &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            border-left: 3.2rem solid transparent;
-            border-right: 3.2rem solid transparent;
-            border-bottom: 7.2rem solid $main-color;
-            top: 3.6rem;
-            left: -2.2rem;
-        }
-    }
-    &_main {
+    &__main {
         width: 253px;
         height: 253px;
         top: 6.6rem;
         left: -12.8rem;
+        @media (max-width: $r_tab) {
+            width: 194px;
+            height: 194px;
+            top: 7.6rem;
+            left: -8rem;
+        }
+        &_triangle {
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                border-left: 3.2rem solid transparent;
+                border-right: 3.2rem solid transparent;
+                border-bottom: 7.2rem solid $main-color;
+                top: 3.6rem;
+                left: -2.2rem;
+                @media (max-width: $r_tab) {
+                    border-left: 1.5rem solid transparent;
+                    border-right: 1.5rem solid transparent;
+                    border-bottom: 3rem solid $main-color;
+                    top: auto;
+                    bottom: -2rem;
+                    left: 8.7rem;
+                }
+            }
+        }
     }
-    &_connection {
+    &__connection {
         width: 300px;
         height: 300px;
         top: -2.7rem;
         left: -15rem;
+        @media (max-width: $r_tab) {
+            width: 245px;
+            height: 245px;
+            top: -8.7rem;
+            left: -11rem;
+        }
+        &_trianlle {
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                border-left: 3.2rem solid transparent;
+                border-right: 3.2rem solid transparent;
+                border-bottom: 7.2rem solid $main-color;
+                top: 3.6rem;
+                left: -2.2rem;
+                @media (max-width: $r_tab) {
+                    border-left: 1.5rem solid transparent;
+                    border-right: 1.5rem solid transparent;
+                    border-bottom: 3rem solid $main-color;
+                    top: 2rem;
+                    left: auto;
+                    right: 1.2rem;
+                }
+            }
+        }
     }
 }
 
@@ -355,6 +427,10 @@ body {
         padding-top: 5.9rem;
         max-width: 49%;
         margin-left: 51%;
+        @media (max-width: $r_tab) {
+            max-width: 100%;
+            margin-left: 0;
+        }
         &__grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -518,6 +594,9 @@ body {
         gap: 4rem 2%;
         padding-top: 6.2rem;
         padding-bottom: 15.5rem;
+        @media (max-width: $r_tab) {
+            grid-template-columns: repeat(2, 1fr);
+        }
         &__item {
             display: flex;
             justify-content: space-between;
@@ -690,12 +769,28 @@ body {
         padding-top: 6.2rem;
         padding-bottom: 13rem;
         border-bottom: 1px solid $main-color;
+        @media (max-width: $r_tab) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas: "a"
+                                 "b";
+            gap: 12rem;
+        }
     }
     &__item {
         &:nth-child(1) {
             display: flex;
             flex-direction: column;
             justify-content: end;
+            @media (max-width: $r_tab) {
+                grid-area: b;
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        &:nth-child(2) {
+            @media (max-width: $r_tab) {
+                grid-area: a;
+            }
         }
     }
     &__form {
@@ -753,6 +848,9 @@ body {
             padding-left: 0;
             max-width: 40%;
             margin: 0;
+            @media (max-width: $r_tab) {
+                max-width: 100%;
+            }
         }
         &__item {
             border-right: 1px solid $main-color;
