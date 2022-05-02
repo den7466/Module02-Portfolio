@@ -50,12 +50,19 @@ body {
     align-items: center;
     &_header {
         padding-top: 3.4rem;
+        @media (max-width: $r_mob_500) {
+            padding-top: 2.4rem;
+        }
+
     }
     &_footer {
         padding-top: 6rem;
         @media (max-width: $r_tab) {
             flex-direction: column-reverse;
             gap: 4rem;
+        }
+        @media (max-width: $r_mob_500) {
+            padding-top: 5.4rem;
         }
     }
     &__list {
@@ -67,6 +74,9 @@ body {
         font-size: 1.4rem;
         padding-left: 0;
         margin: 0;
+        @media (max-width: $r_mob_500) {
+            font-size: 1.75rem;
+        }
         &_header {
             @media (max-width: $r_tab) {
                 display: none;
@@ -75,6 +85,9 @@ body {
         &_footer {
             @media (max-width: $r_tab) {
                 gap: 2rem;
+            }
+            @media (max-width: $r_mob_500) {
+                font-size: 1.25rem;
             }
         }
     }
@@ -98,6 +111,9 @@ body {
         text-decoration: none;
         padding: .4rem 0;
         transition: .3s;
+        @media (max-width: $r_mob_500) {
+            font-size: 1.75rem;
+        }
         &:hover {
             color: $hover-color;
         }
@@ -141,9 +157,21 @@ body {
 
 .main {
     padding-top: 6rem;
+    @media (max-width: $r_mob_500) {
+        padding-top: 5.1rem;
+    }
     &__image {
         display: block;
         width: 100%;
+        @media (max-width: $r_mob_500) {
+            display: none;
+        }
+        &_m {
+            display: none;
+            @media (max-width: $r_mob_500) {
+                display: block;
+            }
+        }
     }
     &__name {
         font-size: 2.8rem;
@@ -151,17 +179,28 @@ body {
         @media (max-width: $r_tab) {
             font-size: 2.3rem;
         }
+        @media (max-width: $r_mob_500) {
+            font-size: 2.25rem;
+            margin-bottom: 2.5rem;
+        }
     }
     &__info {
         border-bottom: 1px solid $main-color;
         padding-top: 9.8rem;
         padding-bottom: 4rem;
         position: relative;
+        @media (max-width: $r_mob_500) {
+            padding-top: 5.5rem;
+            padding-bottom: 2.6rem;
+        }
         &__footer {
             margin-top: 7.1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @media (max-width: $r_mob_500) {
+                margin-top: 10.5rem;
+            }
         }
         &__list {
             display: flex;
@@ -170,10 +209,16 @@ body {
             list-style: none;
             padding-left: 0;
             gap: 2.5rem;
+            @media (max-width: $r_mob_500) {
+                gap: 1.1rem;
+            }
         }
         &__item {
             border-right: 1px solid $main-color;
             padding: .4rem 3rem .4rem 0;
+            @media (max-width: $r_mob_500) {
+                padding: .4rem 1.25rem .4rem 0;
+            }
             &:nth-child(3) {
                 border-right: none;
                 padding-right: 0;
@@ -187,6 +232,9 @@ body {
             padding-bottom: 1rem;
             letter-spacing: .05rem;
             transition: .3s;
+            @media (max-width: $r_mob_500) {
+                font-size: 1.5rem;
+            }
             &:hover {
                 border-bottom: 2px solid $main-color;
             }
@@ -206,6 +254,9 @@ body {
             color: $main-color;
             text-decoration: none;
             transition: .3s;
+            @media (max-width: $r_mob_500) {
+                font-size: 1.5rem;
+            }
             &:hover {
                 color: $hover-color;
             }
@@ -228,6 +279,12 @@ body {
             left: auto;
             bottom: 1.5rem;
             right: 3.8rem;
+            @media (max-width: $r_mob_500) {
+                width: 60px;
+                height: 60px;
+                bottom: 3.2rem;
+                right: 3.5rem;
+            }
         }
         &_portfolio {
             width: 465px;
@@ -254,6 +311,10 @@ body {
             grid-template-columns: repeat(2, 1fr);
             gap: 4rem 2%;
         }
+        @media (max-width: $r_mob_500) {
+            padding-top: 5.5rem;
+            gap: 5rem 2%;
+        }
         &__title {
             letter-spacing: .05rem;
             font-weight: 700;
@@ -262,6 +323,9 @@ body {
             @media (max-width: $r_tab) {
                 font-size: 1.4rem;
             }
+            @media (max-width: $r_mob_500) {
+                font-size: 1.5rem;
+            }
         }
         &__description {
             font-size: 1.4rem;
@@ -269,6 +333,9 @@ body {
             margin: 2rem 0 0;
             @media (max-width: $r_tab) {
                 font-size: 1.2rem;
+            }
+            @media (max-width: $r_mob_500) {
+                font-size: 1.25rem;
             }
         }
     }
@@ -281,6 +348,11 @@ body {
     padding-bottom: 6rem;
     position: relative;
     gap: 2%;
+    @media (max-width: $r_mob_500) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2.2rem;
+        padding-bottom: 6.2rem;
+    }
 }
 
 .title {
@@ -293,6 +365,9 @@ body {
     letter-spacing: .22rem;
     @media (max-width: $r_tab) {
         font-size: 4.1rem;
+    }
+    @media (max-width: $r_mob_500) {
+        font-size: 3.5rem;
     }
     &_min {
         font-size: 2.8rem;
@@ -320,6 +395,13 @@ body {
                 top: -40px;
                 left: calc(50% - 165.5px);
             }
+            @media (max-width: $r_mob_500) {
+                width: 197px;
+                height: 197px;
+                top: -3.8rem;
+                left: auto;
+                right: 0;
+            }
         }
     }
     &_ellipce {
@@ -329,11 +411,17 @@ body {
             width: 140px;
             height: 140px;
             display: block;
-            top: -50px;
-            left: -70px;
+            top: -5rem;
+            left: -7rem;
             position: absolute;
             background-color: $hover-color;
             border-radius: 100%;
+            @media (max-width: $r_mob_500) {
+                width: 138px;
+                height: 138px;
+                top: -7.1rem;
+                left: -10.6rem;
+            }
         }
     }
 }
@@ -355,6 +443,12 @@ body {
             top: 7.6rem;
             left: -8rem;
         }
+        @media (max-width: $r_mob_500) {
+            width: 135px;
+            height: 135px;
+            top: 4.25rem;
+            left: -6.625rem;
+        }
         &_triangle {
             &::before {
                 content: '';
@@ -373,6 +467,13 @@ body {
                     bottom: -2rem;
                     left: 8.7rem;
                 }
+                @media (max-width: $r_mob_500) {
+                    border-left: 1.75rem solid transparent;
+                    border-right: 1.75rem solid transparent;
+                    border-bottom: 3.75rem solid $main-color;
+                    bottom: -2.75rem;
+                    left: 6.9rem;
+                }
             }
         }
     }
@@ -386,6 +487,12 @@ body {
             height: 245px;
             top: -8.7rem;
             left: -11rem;
+        }
+        @media (max-width: $r_mob_500) {
+            width: 190px;
+            height: 190px;
+            top: -8.5rem;
+            left: -7rem;
         }
         &_trianlle {
             &::before {
@@ -405,6 +512,10 @@ body {
                     left: auto;
                     right: 1.2rem;
                 }
+                @media (max-width: $r_mob_500) {
+                    top: 1.25rem;
+                    right: 2rem;
+                }
             }
         }
     }
@@ -419,10 +530,16 @@ body {
     @media (max-width: $r_tab) {
         font-size: 2.2rem;
     }
+    @media (max-width: $r_mob_500) {
+        font-size: 2rem;
+    }
 }
 
 .about {
     padding: 18.8rem 0 18rem 0;
+    @media (max-width: $r_mob_500) {
+        padding: 10.8rem 0 9.5rem 0;
+    }
     &__skills-box {
         padding-top: 5.9rem;
         max-width: 49%;
@@ -430,6 +547,9 @@ body {
         @media (max-width: $r_tab) {
             max-width: 100%;
             margin-left: 0;
+        }
+        @media (max-width: $r_mob_500) {
+            padding-top: 5rem;
         }
         &__grid {
             display: grid;
@@ -458,10 +578,13 @@ body {
 
 .conditions {
     margin-bottom: 17rem;
+    @media (max-width: $r_mob_500) {
+        margin-bottom: 9.3rem;
+    }
     &__info-block {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, minmax(10.2rem, 1fr));
+        grid-template-rows: repeat(3, minmax(10.5rem, 1fr));
         gap: 0;
         &:last-child {
             border-bottom: 1px solid $main-color;
@@ -486,6 +609,9 @@ body {
         @media (max-width: $r_tab) {
             font-size: 2.2rem;
             padding-left: 4rem;
+        }
+        @media (max-width: $r_mob_500) {
+            font-size: 2rem;
         }
         &::before {
             content: '';
@@ -515,6 +641,9 @@ body {
         @media (max-width: $r_tab) {
             font-size: 1.4rem;
         }
+        @media (max-width: $r_mob_500) {
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -530,11 +659,19 @@ body {
         @media (max-width: $r_tab) {
             font-size: 2.2rem;
         }
+        @media (max-width: $r_mob_500) {
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 2.5rem;
+        }
     }
     &__title-box {
         padding-bottom: 13rem;
         z-index: 0;
         position: relative;
+        @media (max-width: $r_mob_500) {
+            padding-bottom: 8rem;
+        }
     }
     &__info-box {
         position: relative;
@@ -554,6 +691,11 @@ body {
         @media (max-width: $r_tab) {
             font-size: 1.4rem;
         }
+        @media (max-width: $r_mob_500) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-bottom: 5rem;
+        }
     }
     &__days {
         font-weight: 700;
@@ -564,6 +706,10 @@ body {
     &__image {
         width: 49%;
         height: 100%;
+        @media (max-width: $r_mob_500) {
+            width: 100%;
+            margin-top: 8.4rem;
+        }
     }
     &__description__list {
         list-style: "- ";
@@ -571,12 +717,19 @@ body {
         padding-left: 0;
         margin-bottom: 4rem;
         margin-left: 1.4rem;
+        @media (max-width: $r_mob_500) {
+            font-size: 1.5rem;
+            margin-bottom: 2.8rem;
+        }
         &:last-child {
             margin-bottom: 0;
         }
     }
     &__description__item {
         margin-bottom: 1rem;
+        @media (max-width: $r_mob_500) {
+            margin-bottom: 1.3rem;
+        }
     }
     &__title-description {
         display: block;
@@ -589,6 +742,11 @@ body {
         @media (max-width: $r_tab) {
             font-size: 2.2rem;
         }
+        @media (max-width: $r_mob_500) {
+            font-size: 2rem;
+            margin-top: 4rem;
+            margin-bottom: 0;
+        }
     }
     &__grid-1 {
         display: grid;
@@ -600,15 +758,28 @@ body {
         @media (max-width: $r_tab) {
             grid-template-columns: repeat(2, 1fr);
         }
+        @media (max-width: $r_mob_500) {
+            grid-template-columns: repeat(1, 1fr);
+            padding-top: 3.5rem;
+            padding-bottom: 8rem;
+        }
         &__item {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 11%;
+            @media (max-width: $r_mob_500) {
+                gap: 9%;
+                justify-content: flex-start;
+            }
         }
         &__image {
             width: 40px;
             height: 40px;
+            @media (max-width: $r_mob_500) {
+                width: 30px;
+                height: 30px;
+            }
         }
         &__title {
             font-weight: 700;
@@ -631,6 +802,9 @@ body {
         grid-template-columns: repeat(4, 1fr);
         align-items: center;
         padding-bottom: 18.1rem;
+        @media (max-width: $r_mob_500) {
+            padding-bottom: 10rem;
+        }
         &__item {
             display: flex;
             justify-content: center;
@@ -640,12 +814,18 @@ body {
             @media (max-width: $r_tab) {
                 min-height: 11.6rem;
             }
+            @media (max-width: $r_mob_500) {
+                min-height: 5.4rem;
+            }
         }
         &__image {
             height: fit-content;
             filter: grayscale(1);
             cursor: pointer;
             transition: .3s;
+            @media (max-width: $r_mob_500) {
+                height: 25px;
+            }
             &:hover {
                 filter: grayscale(0);
             }
@@ -664,8 +844,15 @@ body {
         border-bottom: 1px solid $main-color;
         padding-top: 6rem;
         padding-bottom: 5.9rem;
+        @media (max-width: $r_mob_500) {
+            padding-top: 5rem;
+            padding-bottom: 3.9rem;
+        }
         &:nth-child(3) {
             border-bottom: none;
+            @media (max-width: $r_mob_500) {
+                border-bottom: 1px solid $main-color;
+            }
         }
     }
     &__grid {
@@ -684,6 +871,10 @@ body {
             @media (max-width: $r_tab) {
                 font-size: 2.2rem;
             }
+            @media (max-width: $r_mob_500) {
+                font-size: 2rem;
+                margin: 0 0 2.5rem 0;
+            }
         }
         &__description {
             opacity: .8;
@@ -693,6 +884,10 @@ body {
             @media (max-width: $r_tab) {
                 font-size: 1.3rem;
             }
+            @media (max-width: $r_mob_500) {
+                font-size: 1.25rem;
+                margin: 0 0 4.2rem 0;
+            }
         }
         &__link {
             color: $main-color;
@@ -701,6 +896,9 @@ body {
             padding-top: 1rem;
             padding-bottom: 1rem;
             transition: .3s;
+            @media (max-width: $r_mob_500) {
+                font-size: 1.5rem;
+            }
             &:hover {
                 border-bottom: 2px solid $main-color;
             }
@@ -723,6 +921,10 @@ body {
             @media (max-width: $r_tab) {
                 font-size: 1.4rem;
             }
+            @media (max-width: $r_mob_500) {
+                margin: 0 0 2.8rem 0;
+                font-size: 1.5rem;
+            }
         }
         &__list {
             padding-left: 1.5rem;
@@ -735,6 +937,9 @@ body {
             @media (max-width: $r_tab) {
                 font-size: 1.4rem;
             }
+            @media (max-width: $r_mob_500) {
+                font-size: 1.5rem;
+            }
         }
         &__price {
             font-size: 4.2rem;
@@ -746,6 +951,9 @@ body {
             @media (max-width: $r_tab) {
                 font-size: 3.2rem;
             }
+            @media (max-width: $r_mob_500) {
+                font-size: 2.75rem;
+            }
             &_ellipce {
                 &::before {
                     content: '';
@@ -756,8 +964,14 @@ body {
                     position: absolute;
                     background-color: $hover-color;
                     border-radius: 100%;
-                    top: -14px;
-                    left: -42px;
+                    top: -1.4rem;
+                    left: -4.2rem;
+                    @media (max-width: $r_mob_500) {
+                        width: 40px;
+                        height: 40px;
+                        top: -0.75rem;
+                        left: -2.75rem;
+                    }
                 }
             }
         }
@@ -777,6 +991,11 @@ body {
             grid-template-areas: "a"
                                  "b";
             gap: 12rem;
+        }
+        @media (max-width: $r_mob_500) {
+            padding-top: 5.4rem;
+            padding-bottom: 7.2rem;
+            gap: 7.5rem;
         }
     }
     &__item {
@@ -815,6 +1034,11 @@ body {
             margin-bottom: 2.3rem;
             color: rgba($main-color, .2);
             background-color: rgba($main-color, .1);
+            @media (max-width: $r_mob_500) {
+                height: 55px;
+                margin-bottom: 2.6rem;
+                font-size: 1.25rem;
+            }
         }
         &__select {
             margin-bottom: 4rem;
@@ -826,6 +1050,10 @@ body {
             color: rgba($main-color, 1);
             background-color: rgba($main-color, .1);
             border: 0;
+            @media (max-width: $r_mob_500) {
+                height: 55px;
+                font-size: 1.25rem;
+            }
         }
         &__button {
             display: block;
@@ -836,6 +1064,10 @@ body {
             font-weight: 700;
             cursor: pointer;
             transition: .3s;
+            @media (max-width: $r_mob_500) {
+                height: 55px;
+                font-size: 1.5rem;
+            }
             &:hover {
                 background-color: #EA0E00;
             }
@@ -847,17 +1079,23 @@ body {
             justify-content: space-between;
             align-items: center;
             list-style: none;
-            gap: 2.5rem;
+            gap: 1.1rem;
             padding-left: 0;
             max-width: 40%;
             margin: 0;
             @media (max-width: $r_tab) {
                 max-width: 100%;
             }
+            @media (max-width: $r_mob_500) {
+                font-size: 1.5rem;
+            }
         }
         &__item {
             border-right: 1px solid $main-color;
             padding: .4rem 3rem .4rem 0;
+            @media (max-width: $r_mob_500) {
+                padding: .4rem 1.25rem .4rem 0;
+            }
             &:nth-child(3) {
                 border-right: none;
                 padding-right: 0;
@@ -887,10 +1125,16 @@ body {
         @media (max-width: $r_tab) {
             flex-direction: column;
         }
+        @media (max-width: $r_mob_500) {
+            font-size: 1.25rem;
+        }
     }
     &__author {
         font-size: 1.2rem;
         color: $main-color;
         line-height: 1.5;
+        @media (max-width: $r_mob_500) {
+            font-size: 1.25rem;
+        }
     }
 }
