@@ -46,8 +46,12 @@ if (window.NodeList && !NodeList.prototype.forEach) {
   const dropDownInput = dropDownWrapper.querySelector('.connection__dropdown__input_hidden');
 
   dropDownBtn.addEventListener('click', function(){
+    if(dropDownWrapper.querySelector('.connection__dropdown__button_active')){
+      this.classList.remove('connection__dropdown__button_active');
+    }else{
+      this.classList.add('connection__dropdown__button_active');
+    }
     dropDownList.classList.toggle('connection__dropdown__list_visible');
-    this.classList.add('connection__dropdown__list_active');
   });
 
   dropDownListItems.forEach(function(listItem){
@@ -56,20 +60,21 @@ if (window.NodeList && !NodeList.prototype.forEach) {
       dropDownBtn.innerText = this.innerText;
       dropDownBtn.focus();
       dropDownInput.value = this.dataset.value;
+      dropDownBtn.classList.remove('connection__dropdown__button_active');
       dropDownList.classList.remove('connection__dropdown__list_visible');
     });
   });
 
   document.addEventListener('click', function(e){
     if(e.target !== dropDownBtn){
-      dropDownBtn.classList.remove('connection__dropdown__list_active');
+      dropDownBtn.classList.remove('connection__dropdown__button_active');
       dropDownList.classList.remove('connection__dropdown__list_visible');
     }
   });
 
   document.addEventListener('keydown', function(e){
     if(e.key === 'Tab' || e.key === 'Escape'){
-      dropDownBtn.classList.remove('connection__dropdown__list_active');
+      dropDownBtn.classList.remove('connection__dropdown__button_active');
       dropDownList.classList.remove('connection__dropdown__list_visible');
     }
   });

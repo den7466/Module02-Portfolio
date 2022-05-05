@@ -92,8 +92,11 @@ body {
         width: 100%;
         background-color: #232326;
         z-index: 101;
-        display: block;
+        display: none;
         transition: .3s all;
+        @media (max-width: $r_tab) {
+            display: block;
+        }
     }
     &__button-mobile {
         position: absolute;
@@ -1181,15 +1184,19 @@ body {
                 background-position: center center;
                 background-size: 12px 8px;
                 pointer-events: none;
+                transform: rotate(0deg);
                 transition: .3s all;
             }
             &_active {
                 outline: none;
+                &::after {
+                    transform: rotate(180deg);
+                }
             }
         }
         &__list {
             position: absolute;
-            display: none;
+            height: 0px;
             z-index: 100;
             top: 65px;
             left: 0;
@@ -1202,12 +1209,13 @@ body {
             background-color: #232326;
             border: 0;
             overflow: hidden;
+            transition: .3s all;
             @media (max-width: $r_mob_500) {
                 font-size: 1.25rem;
                 top: 55px;
             }
             &_visible {
-                display: block;
+                height: 135px;
             }
         }
         &__item {
