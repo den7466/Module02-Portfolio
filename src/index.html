@@ -440,13 +440,19 @@
                         <label class="connection__form__label">Телефон или почта</label>
                         <input type="tel" class="connection__form__phone" placeholder="Введите телефон">
                         <label class="connection__form__label">Выберите удобный способ связи</label>
-                        <select class="connection__form__select">
-                            <option value="telegram" class="connection__form__option">Telegram</option>
-                            <option value="whatsapp" class="connection__form__option">WhatsApp</option>
-                            <option value="viber" class="connection__form__option">Viber</option>
-                            <option value="call" class="connection__form__option">Звонок на телефон</option>
-                            <option value="sms" class="connection__form__option">SMS сообщение</option>
-                        </select>
+                        <div class="connection__form-group">
+                            <div class="connection__dropdown">
+                                <button type="button" class="connection__dropdown__button">Telegram</button>
+                                <ul class="connection__dropdown__list">
+                                    <li class="connection__dropdown__item" data-value="telegram">Telegram</li>
+                                    <li class="connection__dropdown__item" data-value="whatsapp">WhatsApp</li>
+                                    <li class="connection__dropdown__item" data-value="viber">Viber</li>
+                                    <li class="connection__dropdown__item" data-value="call">Звонок на телефон</li>
+                                    <li class="connection__dropdown__item" data-value="sms">SMS сообщение</li>
+                                </ul>
+                                <input type="text" value="telegram" class="connection__dropdown__input_hidden">
+                            </div>
+                        </div>
                         <button type="submit" class="connection__form__button">Отправить</button>
                     </form>
                 </div>
