@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
 </head>
 <body>
     <header class="header header_static">
@@ -279,27 +286,75 @@
             <div class="portfolio__grid-2">
                 <div class="portfolio__grid-2__item">
                     <img src="./images/grid-2-icons/html.svg" alt="" class="portfolio__grid-2__image">
+                    <div class="portfolio__grid-2__item-desc-wrapper">
+                        <div class="portfolio__grid-2__item-description">
+                            <p>HTML</p>
+                            <p>Стандартизированный язык разметки документов для просмотра веб-страниц в браузере</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="portfolio__grid-2__item">
                     <img src="./images/grid-2-icons/css.svg" alt="" class="portfolio__grid-2__image">
+                    <div class="portfolio__grid-2__item-desc-wrapper">
+                        <div class="portfolio__grid-2__item-description">
+                            <p>CSS</p>
+                            <p>Формальный язык описания внешнего вида документа (веб-страницы), написанного с использованием языка разметки</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="portfolio__grid-2__item">
                     <img src="./images/grid-2-icons/js.svg" alt="" class="portfolio__grid-2__image">
+                    <div class="portfolio__grid-2__item-desc-wrapper">
+                        <div class="portfolio__grid-2__item-description">
+                            <p>JavaScript ES6+</p>
+                            <p>Язык программирования высокого уровня, использующийся для придания интерактивности веб-страницам</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="portfolio__grid-2__item">
                     <img src="./images/grid-2-icons/jquery.svg" alt="" class="portfolio__grid-2__image">
+                    <div class="portfolio__grid-2__item-desc-wrapper">
+                        <div class="portfolio__grid-2__item-description">
+                            <p>jQuery</p>
+                            <p>Набор функций JavaScript, фокусирующийся на взаимодействии JavaScript и HTML</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="portfolio__grid-2__item">
                     <img src="./images/grid-2-icons/bootstrap.svg" alt="" class="portfolio__grid-2__image">
+                    <div class="portfolio__grid-2__item-desc-wrapper">
+                        <div class="portfolio__grid-2__item-description">
+                            <p>Bootstrap</p>
+                            <p>Свободный набор инструментов для создания сайтов и веб-приложений</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="portfolio__grid-2__item">
                     <img src="./images/grid-2-icons/php.svg" alt="" class="portfolio__grid-2__image">
+                    <div class="portfolio__grid-2__item-desc-wrapper">
+                        <div class="portfolio__grid-2__item-description">
+                            <p>PHP</p>
+                            <p>Распространённый язык программирования общего назначения с открытым исходным кодом</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="portfolio__grid-2__item">
                     <img src="./images/grid-2-icons/vue.svg" alt="" class="portfolio__grid-2__image">
+                    <div class="portfolio__grid-2__item-desc-wrapper">
+                        <div class="portfolio__grid-2__item-description">
+                            <p>Vue.js</p>
+                            <p>JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="portfolio__grid-2__item">
                     <img src="./images/grid-2-icons/wordpress.svg" alt="" class="portfolio__grid-2__image">
+                    <div class="portfolio__grid-2__item-desc-wrapper">
+                        <div class="portfolio__grid-2__item-description">
+                            <p>WordPress</p>
+                            <p>Cвободно распространяемая система управления содержимым сайта с открытым исходным кодом - написана на PHP</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -438,7 +493,7 @@
                 <div class="connection__item">
                     <form class="connection__form">
                         <label class="connection__form__label">Телефон или почта</label>
-                        <input type="tel" class="connection__form__phone" placeholder="Введите телефон">
+                        <input type="tel" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" class="connection__form__phone" placeholder="Введите телефон">
                         <label class="connection__form__label">Выберите удобный способ связи</label>
                         <div class="connection__form-group">
                             <div class="connection__dropdown">

@@ -12,7 +12,7 @@ $r_mob_360: 360px;
 $r_mob_500: 500px;
 $r_tab: 768px;
 $r_tab_900: 900px;
-// $r_desk: 1000px;
+$r_desk: 1000px;
 // $r_desk_1120: 1120px;
 // $r_desk_1170: 1170px;
 // $r_desk_hd: 1200px;
@@ -889,6 +889,7 @@ body {
             padding-bottom: 10rem;
         }
         &__item {
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -912,6 +913,63 @@ body {
             &:hover {
                 filter: grayscale(0);
             }
+            &:hover + .portfolio__grid-2__item-desc-wrapper {
+                height: 130px;
+            }
+        }
+        &__item-desc-wrapper {
+            position: absolute;
+            height: 0px;
+            z-index: 80;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 0;
+            top: 91%;
+            left: calc(50% - 116px);
+            width: 232px;
+            transition: .3s all;
+            @media (max-width: $r_desk) {
+                width: 160px;
+                left: calc(50% - 80px);
+            }
+            @media (max-width: $r_tab) {
+                display: none;
+            }
+        }
+        &__item-description {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: calc(100% - 8px);
+            padding: 0 10px;
+            background-color: #E31B1B;
+            font-size: 1rem;
+            line-height: 1.5;
+            &::after {
+                content: '';
+                z-index: 80;
+                position: absolute;
+                display: block;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-bottom: 8px solid #E31B1B;
+                top: -8px;
+                left: calc(50% - 7px);
+                transition: .3s all;
+            }
+        }
+        &__item-description > p {
+            opacity: .8;
+            display: block;
+            text-align: center;
+            margin-bottom: 0;
+            margin-top: .5rem;
+            transition: .3s all .3s;
         }
     }
 }
@@ -1114,17 +1172,23 @@ body {
         &__phone {
             height: 65px;
             outline: none;
-            border: 0;
+            border: 1px solid transparent;
             font-size: 1.2rem;
             line-height: 1.5;
             padding: 0 20px;
             margin-bottom: 2.3rem;
-            color: rgba($main-color, .2);
+            color: rgba($main-color, 1);
             background-color: rgba($main-color, .1);
             @media (max-width: $r_mob_500) {
                 height: 55px;
                 margin-bottom: 2.6rem;
                 font-size: 1.25rem;
+            }
+            &::placeholder {
+                color: rgba($main-color, .2);
+            }
+            &:invalid {
+                border: 1px solid $hover-color;
             }
         }
         &__button {
@@ -1144,9 +1208,6 @@ body {
                 background-color: #EA0E00;
             }
         }
-    }
-    &__form-group {
-        
     }
     &__dropdown {
         position: relative;
@@ -1175,7 +1236,7 @@ body {
             &::after {
                 content: '';
                 position: absolute;
-                top: 50%;
+                top: calc(50% - 4px);
                 right: 24px;
                 width: 12px;
                 height: 8px;
@@ -1215,22 +1276,24 @@ body {
                 top: 55px;
             }
             &_visible {
-                height: 135px;
+                height: 275px;
             }
         }
         &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             margin: 0;
             padding: 0;
-            height: 27px;
+            height: 55px;
             padding: 0 1.5rem;
             background-color: rgba($main-color, .1);
             color: rgba($main-color, .4);
             cursor: pointer;
-            @media (max-width: $r_mob_500) {
-                height: 55px;
-            }
+            transition: .3s all;
             &:hover {
                 color: rgba($main-color, 1);
+                background-color: rgba($main-color, .2);
             }
         }
         &__input {
