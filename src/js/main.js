@@ -37,11 +37,41 @@ window.addEventListener('scroll', fixMenu);
 
 // Mobile menu
 const mobileMenu = document.querySelector('.menu_mobile');
+
 function openMobileMenu() {
     mobileMenu.style.top = 0;
 }
 function closeMobileMenu() {
-    mobileMenu.style.top = -580 + 'px';
+    mobileMenu.style.top = -624 + 'px';
+}
+
+// Pop-up
+const popUpBg = document.querySelector('.pop-up__bg');
+const popUp = document.querySelector('.pop-up');
+
+function openPopUp() {
+  popUpBg.style.visibility = 'visible';
+  popUp.style.visibility = 'visible';
+  popUp.style.opacity = 1;
+  document.addEventListener('click', function(e){
+    if(e.target == popUpBg){
+      popUpBg.style.visibility = 'hidden';
+      popUp.style.visibility = 'hidden';
+      popUp.style.opacity = 0;
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      popUpBg.style.visibility = 'hidden';
+      popUp.style.visibility = 'hidden';
+      popUp.style.opacity = 0;
+    }
+  });
+}
+function closePopUp() {
+  popUpBg.style.visibility = 'hidden';
+  popUp.style.visibility = 'hidden';
+  popUp.style.opacity = 0;
 }
 
 //Polyfill for forEach

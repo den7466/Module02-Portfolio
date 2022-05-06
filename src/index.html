@@ -79,7 +79,7 @@
                 <p class="main__name">Александр Антропов</p>
                 <h1 class="title">web-разработчик</h1>
                 <div class="main__info__footer">
-                    <a href="#" class="main__info__link">Обсудить проект</a>
+                    <button class="main__info__link" onclick="openPopUp()">Обсудить проект</button>
                     <ul class="main__info__list">
                         <li class="main__info__item">
                             <a href="#" class="main__info__link-soc">Vk</a>
@@ -377,7 +377,7 @@
                             <p class="rates__grid__description">
                                 Небольшой сайт состоящий из одной страницы
                             </p>
-                            <a href="#" class="rates__grid__link">Обсудить проект</a>
+                            <button class="rates__grid__link" onclick="openPopUp()">Обсудить проект</button>
                         </div>
                         <div class="rates__grid__item">
                             <p class="rates__grid__list-title">
@@ -409,7 +409,7 @@
                             <p class="rates__grid__description">
                                 Небольшой сайт с n-количеством страниц
                             </p>
-                            <a href="#" class="rates__grid__link">Обсудить проект</a>
+                            <button class="rates__grid__link" onclick="openPopUp()">Обсудить проект</button>
                         </div>
                         <div class="rates__grid__item">
                             <p class="rates__grid__list-title">
@@ -441,7 +441,7 @@
                             <p class="rates__grid__description">
                                 Полноценный каталог вашей продукции
                             </p>
-                            <a href="#" class="rates__grid__link">Обсудить проект</a>
+                            <button class="rates__grid__link" onclick="openPopUp()">Обсудить проект</button>
                         </div>
                         <div class="rates__grid__item">
                             <p class="rates__grid__list-title">
@@ -493,7 +493,7 @@
                 <div class="connection__item">
                     <form class="connection__form">
                         <label class="connection__form__label">Телефон или почта</label>
-                        <input type="tel" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" class="connection__form__phone" placeholder="Введите телефон">
+                        <input type="text" class="connection__form__phone" placeholder="Введите телефон">
                         <label class="connection__form__label">Выберите удобный способ связи</label>
                         <div class="connection__form-group">
                             <div class="connection__dropdown">
@@ -582,6 +582,40 @@
             </ul>
     </div>
     <!-- Mobile menu - end -->
+    <!-- Pop-up -->
+    <div class="pop-up__bg">
+        <div class="pop-up">
+            <button class="pop-up__close-btn" onclick="closePopUp()"></button>
+            <div class="pop-up__description-box">
+                <h2 class="pop-up__title">
+                    Расскажите о своем проекте
+                </h2>
+                <p class="pop-up__description">
+                    Заполните все поля, и я свяжусь с вами в ближайшее время
+                </p>
+            </div>
+            <form class="connection__form">
+                <label class="connection__form__label">Телефон или почта</label>
+                <input type="text" class="connection__form__phone" placeholder="Введите телефон">
+                <label class="connection__form__label">Выберите удобный способ связи</label>
+                <div class="connection__form-group">
+                    <div class="connection__dropdown">
+                        <button type="button" class="connection__dropdown__button">Telegram</button>
+                        <ul class="connection__dropdown__list">
+                            <li class="connection__dropdown__item" data-value="telegram">Telegram</li>
+                            <li class="connection__dropdown__item" data-value="whatsapp">WhatsApp</li>
+                            <li class="connection__dropdown__item" data-value="viber">Viber</li>
+                            <li class="connection__dropdown__item" data-value="call">Звонок на телефон</li>
+                            <li class="connection__dropdown__item" data-value="sms">SMS сообщение</li>
+                        </ul>
+                        <input type="text" value="telegram" class="connection__dropdown__input_hidden">
+                    </div>
+                </div>
+                <button type="submit" class="connection__form__button">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <!-- Pop-up - end -->
     <script src="./js/main.js"></script>
 </body>
 </html>
