@@ -1,3 +1,19 @@
+// Smooth Scroll
+const links = document.querySelectorAll(".menu__link");
+
+for (const link of links) {
+    link.addEventListener("click", clickHandler);
+}
+
+function clickHandler(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+
+    document.querySelector(href).scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
 // Fixed menu
 const headerStatic = document.querySelector('.header_static');
 const headerFixed = document.querySelector('.header_fixed');

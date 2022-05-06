@@ -619,7 +619,7 @@ body {
 }
 
 .about {
-    padding: 18.8rem 0 18rem 0;
+    padding: 18.8rem 0 0 0;
     @media (max-width: $r_mob_500) {
         padding: 10.8rem 0 9.5rem 0;
     }
@@ -660,7 +660,7 @@ body {
 }
 
 .conditions {
-    margin-bottom: 17rem;
+    padding-top: 18rem;
     @media (max-width: $r_mob_500) {
         margin-bottom: 9.3rem;
     }
@@ -749,6 +749,7 @@ body {
         }
     }
     &__title-box {
+        padding-top: 17rem;
         padding-bottom: 13rem;
         z-index: 0;
         position: relative;
@@ -884,10 +885,6 @@ body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         align-items: center;
-        padding-bottom: 18.1rem;
-        @media (max-width: $r_mob_500) {
-            padding-bottom: 10rem;
-        }
         &__item {
             position: relative;
             display: flex;
@@ -975,10 +972,13 @@ body {
 }
 
 .rates {
+    padding-top: 18.1rem;
+    @media (max-width: $r_mob_500) {
+        padding-top: 10rem;
+    }
     &__list {
         list-style: none;
         padding-left: 0;
-        padding-bottom: 12rem;
         margin: 0;
     }
     &__item {
@@ -1124,6 +1124,7 @@ body {
 }
 
 .connection {
+    padding-top: 12rem;
     &__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1171,7 +1172,6 @@ body {
         }
         &__phone {
             height: 65px;
-            outline: none;
             border: 1px solid transparent;
             font-size: 1.2rem;
             line-height: 1.5;
@@ -1218,7 +1218,6 @@ body {
             margin-bottom: 4rem;
             width: 100%;
             height: 65px;
-            outline: none;
             font-size: 1.2rem;
             line-height: 1.5;
             padding: 0 1.5rem;
@@ -1229,9 +1228,6 @@ body {
             @media (max-width: $r_mob_500) {
                 height: 55px;
                 font-size: 1.25rem;
-            }
-            &:focus {
-                outline: none;
             }
             &::after {
                 content: '';
