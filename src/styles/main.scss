@@ -91,12 +91,22 @@ body {
         top: -624px;
         width: 100%;
         background-color: #232326;
-        z-index: 101;
+        z-index: 102;
         display: none;
         transition: .3s all;
         @media (max-width: $r_tab) {
             display: block;
         }
+    }
+    &__mobile-bg {
+        background: rgba(35, 35, 38, .8);;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        visibility: hidden;
+        z-index: 101;
+        transition: .3s all;
     }
     &__button-mobile {
         position: absolute;

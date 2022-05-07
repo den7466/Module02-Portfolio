@@ -37,12 +37,46 @@ window.addEventListener('scroll', fixMenu);
 
 // Mobile menu
 const mobileMenu = document.querySelector('.menu_mobile');
+const mobileBg = document.querySelector('.menu__mobile-bg');
+const mobileMenuList = document.querySelectorAll('.menu__list_mobile');
+const mobileMenuContacts = document.querySelectorAll('.menu__contacts_mobile > a');
+const mobileMenuInfoList = document.querySelectorAll('.main__info__list_mobile a');
 
 function openMobileMenu() {
-    mobileMenu.style.top = 0;
+  mobileBg.style.visibility = 'visible';
+  mobileMenu.style.top = 0;
+  document.addEventListener('click', function(e){
+    if(e.target == mobileBg){
+      mobileMenu.style.top = -624 + 'px';
+      mobileBg.style.visibility = 'hidden';
+    }
+  });
+  mobileMenuList.forEach(function(moblistItem){
+    moblistItem.addEventListener('click', function(e){
+      e.stopPropagation();
+      mobileMenu.style.top = -624 + 'px';
+      mobileBg.style.visibility = 'hidden';
+    });
+  });
+  mobileMenuContacts.forEach(function(moblistContactItem){
+    moblistContactItem.addEventListener('click', function(e){
+      e.stopPropagation();
+      mobileMenu.style.top = -624 + 'px';
+      mobileBg.style.visibility = 'hidden';
+    });
+  });
+  mobileMenuInfoList.forEach(function(mobInfolistItem){
+    mobInfolistItem.addEventListener('click', function(e){
+      e.stopPropagation();
+      mobileMenu.style.top = -624 + 'px';
+      mobileBg.style.visibility = 'hidden';
+    });
+  });
 }
+
 function closeMobileMenu() {
-    mobileMenu.style.top = -624 + 'px';
+  mobileMenu.style.top = -624 + 'px';
+  mobileBg.style.visibility = 'hidden';
 }
 
 // Pop-up
